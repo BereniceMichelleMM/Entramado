@@ -1,0 +1,77 @@
+<body>
+
+Hola
+
+<canvas id="linea1" width="800" height="800">Su navegador no soporta canvas :( </canvas>
+<script>
+
+window.onload = function() {
+	var canvas = document.getElementById("linea1");
+		if (canvas && canvas.getContext) {
+
+
+
+		var ctx = canvas.getContext("2d");
+
+		
+		                /*A*/
+		                ctx.lineWidth = 3;
+				ctx.strokeStyle = "#f00";
+				ctx.beginPath();
+				ctx.moveTo(400, 0);
+				ctx.lineTo(0, 400);
+				ctx.stroke();
+
+				ctx.moveTo(400, 800);
+				ctx.lineTo(0, 400);
+				ctx.stroke();
+
+                                ctx.moveTo(400, 800);
+				ctx.lineTo(800, 400);
+				ctx.stroke();
+				
+				ctx.moveTo(400, 0);
+				ctx.lineTo(800, 400);
+				ctx.stroke();
+
+				/*B*/
+				ctx.moveTo(200, 200);
+				ctx.lineTo(600, 200);
+				ctx.stroke();
+
+				ctx.moveTo(200, 200);
+				ctx.lineTo(200, 600);
+				ctx.stroke();
+
+                                ctx.moveTo(200, 600);
+				ctx.lineTo(600, 600);
+				ctx.stroke();
+				
+				ctx.moveTo(600, 600);
+				ctx.lineTo(600, 200);
+				ctx.stroke();
+
+		var x = 200;
+		var y = 200;
+
+		var xf = 200;
+		var yf;
+
+
+
+			if (ctx) {
+                        for (yf = 200; yf <= 400; yf + 5){
+			xf += 5;
+				ctx.lineWidth = 3;
+				ctx.strokeStyle = "#f00";
+				ctx.beginPath();
+				ctx.moveTo(x, y);
+				ctx.lineTo(xf, yf);
+				ctx.stroke();
+			}
+			}
+		}
+}
+</script>
+
+</body>
